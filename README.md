@@ -1,17 +1,19 @@
 
-Kudos to:
+***Update mpd to latest available, docker compose file included!***
+
+Kudos goes to:
 ### Docker MPD intended for HTTP streaming
 
-https://hub.docker.com/r/randomcoww/mpd/
+#h??ps://hub.docker.com/r/randomcoww/mpd/
 
 Default configuration creates a FLAC-3 stream over HTTP on port 8000
 
 **Images**
 
-https://hub.docker.com/repository/docker/randomcoww/mpd
+https://hub.docker.com/repository/docker/b1trid3r/mpd
 
 #### Sample usage
-NOT THERE YET!!!**Docker** 
+**Docker** 
 
 ```bash
 docker run -it --rm \
@@ -19,10 +21,10 @@ docker run -it --rm \
     -v cache_path:/mpd/cache \
     -p 6600:6600 \
     -p 8000:8000 \
-    randomcoww/mpd:0.22.1
+    b1trid3r/mpd:v.0.23.4
 ```
 
-NOT THERE YET!!!**Podman**
+**Podman**
 
 ```bash
 podman run -it --rm \
@@ -31,9 +33,5 @@ podman run -it --rm \
     -v cache_path:/mpd/cache \
     -p 6600:6600 \
     -p 8000:8000 \
-    randomcoww/mpd:0.22.1
+    b1trid3r/mpd:v.0.23.4
 ```
-
-NOT THERE YET!!!**Kubernetes**
-
-https://github.com/randomcoww/terraform-infra/tree/master/services/mpd
