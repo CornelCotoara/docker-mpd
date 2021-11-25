@@ -1,7 +1,7 @@
 FROM alpine:edge
 
-ARG MPD_VERSION=0.22
-ARG MPD_PATCH=10
+ARG MPD_VERSION=0.23
+ARG MPD_PATCH=4
 
 RUN set -x \
   \
