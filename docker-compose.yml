@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-    mpd-ss:
+    mpd:
         hostname: mpd
         container_name: mpd
         volumes:
