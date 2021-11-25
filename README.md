@@ -9,8 +9,7 @@ Default configuration creates a FLAC-3 stream over HTTP on port 8000
 https://hub.docker.com/repository/docker/randomcoww/mpd
 
 #### Sample usage
-
-**Docker**
+NOT THERE YET!!!**Docker** 
 
 ```bash
 docker run -it --rm \
@@ -21,7 +20,7 @@ docker run -it --rm \
     randomcoww/mpd:0.22.1
 ```
 
-**Podman**
+NOT THERE YET!!!**Podman**
 
 ```bash
 podman run -it --rm \
@@ -33,6 +32,6 @@ podman run -it --rm \
     randomcoww/mpd:0.22.1
 ```
 
-**Kubernetes**
+NOT THERE YET!!!**Kubernetes**
 
 https://github.com/randomcoww/terraform-infra/tree/master/services/mpd
