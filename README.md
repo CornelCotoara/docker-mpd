@@ -24,6 +24,24 @@ docker run -it --rm \
     b1trid3r/mpd:v.0.23.4
 ```
 
+**Docker Compose**
+
+```bash
+version: '3.3'
+services:
+    mpd:
+        hostname: mpd
+        container_name: mpd
+        volumes:
+            - '/your_media/music/:/mpd/music' #add your personal settings
+            - '/your_cache/cache:/mpd/cache'  #add your personal settings
+        ports:
+            - '6600:6600'
+            - '8000:8000'
+        image: 'b1trid3r/mpd:v.0.23.4'
+        restart: unless-stopped
+```
+
 **Podman**
 
 ```bash
