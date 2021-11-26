@@ -11,6 +11,10 @@ Default configuration creates a FLAC-3 stream over HTTP on port 8000
 **Images**
 
 https://hub.docker.com/repository/docker/b1trid3r/mpd
+or
+```bash
+docker pull ghcr.io/cornelcotoara/docker-mpd:master
+```
 
 #### Sample usage
 **Docker** 
