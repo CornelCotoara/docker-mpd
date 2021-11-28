@@ -1,12 +1,12 @@
 
-***Update mpd to latest available, docker compose file included!***
+*** Update mpd to latest available, docker compose file included, DEFAULTS TO OPUS!***
 
 Kudos goes to:
 ### Docker MPD intended for HTTP streaming
 
 #h??ps://hub.docker.com/r/randomcoww/mpd/
 
-Default configuration creates a FLAC-3 stream over HTTP on port 8000
+** Default configuration creates a *OPUS* stream over HTTP on port 8000
 
 **Images**
 
