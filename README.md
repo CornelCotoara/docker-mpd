@@ -6,6 +6,10 @@ OpusTAGS enabled in stream (works for vlc and similar apps)
 ##
 
 ** Default configuration creates a *OPUS* stream over HTTP on port 8000
+Running media info demo!
+
+![image](https://user-images.githubusercontent.com/94889846/143832781-b9c9d816-f915-4e85-ac06-c5c70c013353.png)
+
 
 **Images**
 
