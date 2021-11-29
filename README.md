@@ -1,10 +1,9 @@
 
 *** Update mpd to latest available, docker compose file included, DEFAULTS TO OPUS!***
-
-Kudos goes to:
-### Docker MPD intended for HTTP streaming
-
-#h??ps://hub.docker.com/r/randomcoww/mpd/
+## 
+Add library auto-update, folder depth, symlink to config.
+OpusTAGS enabled in stream (works for vlc and similar apps)
+##
 
 ** Default configuration creates a *OPUS* stream over HTTP on port 8000
 
@@ -74,3 +73,5 @@ podman run -it --rm \
     -p 8000:8000 \
     b1trid3r/mpd:v.0.23.4
 ```
+
+tMost kudos and my Thanks to @randomcoww
