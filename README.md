@@ -9,8 +9,6 @@ OpusTAGS enabled in stream (works for vlc and similar apps)
 
 **Images**
 
-https://hub.docker.com/repository/docker/b1trid3r/mpd
-or
 ```bash
 docker pull ghcr.io/cornelcotoara/docker-mpd:master
 ```
@@ -24,7 +22,7 @@ docker run -it --rm \
     -v cache_path:/mpd/cache \
     -p 6600:6600 \
     -p 8000:8000 \
-    b1trid3r/mpd:v.0.23.4
+    ghcr.io/cornelcotoara/docker-mpd:master
 ```
 
 **Docker Compose ghr.io**
@@ -58,7 +56,7 @@ services:
         ports:
             - '6600:6600'
             - '8000:8000'
-        image: 'b1trid3r/mpd:v.0.23.4'
+        image: 'ghcr.io/cornelcotoara/docker-mpd:master'
         restart: unless-stopped
 ```
 
@@ -71,7 +69,7 @@ podman run -it --rm \
     -v cache_path:/mpd/cache \
     -p 6600:6600 \
     -p 8000:8000 \
-    b1trid3r/mpd:v.0.23.4
+    ghcr.io/cornelcotoara/docker-mpd:master
 ```
 
 tMost kudos and my Thanks to @randomcoww
