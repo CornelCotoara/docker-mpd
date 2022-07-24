@@ -43,6 +43,7 @@ RUN set -x \
     mpg123-dev \
     wavpack-dev \
     ca-certificates \
+    wget \
   \
 ## build
   && mkdir -p /usr/src/mpd \
