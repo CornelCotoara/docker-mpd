@@ -1,7 +1,7 @@
 FROM alpine:3
 
 ARG MPD_VERSION=0.23
-ARG MPD_PATCH=9
+ARG MPD_PATCH=10
 
 RUN set -x \
   \
