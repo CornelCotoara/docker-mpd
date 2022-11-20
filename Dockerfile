@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:edge
 
 ARG MPD_VERSION=0.23
 ARG MPD_PATCH=10
