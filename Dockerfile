@@ -11,21 +11,21 @@ LABEL org.opencontainers.image.title="MPD" \
     org.opencontainers.image.revision="${VCS_REF}" 
 
 COPY mpd.conf /etc/mpd.conf.new
-
+       
 RUN set -eux ; \
     apk --no-cache add \
         mpd \
-        opus-tools ; \
-        adduser -DH mpd ; \
-        mkdir /var/lib/mpd/data ; \
-        touch /var/lib/mpd/data/database \
+        opus-tools \
+    ; \
+    mkdir /var/lib/mpd/data ; \
+    touch /var/lib/mpd/data/database \
         /var/lib/mpd/data/state \
         /var/lib/mpd/data/sticker.sql \
-          ; \
-        chown -R mpd /var/lib/mpd ; \
-        cp /etc/mpd.conf /etc/mpd.conf.backup ; \
-        mv /etc/mpd.conf.new /etc/mpd.conf ; \
-        chown -R mpd /etc/mpd.con*
+    ; \
+    chown -R mpd:audio /var/lib/mpd ; \
+    cp /etc/mpd.conf /etc/mpd.conf.backup ; \
+    mv /etc/mpd.conf.new /etc/mpd.conf ; \
+    chown -R mpd:audio /etc/mpd.con*             
         
 VOLUME /var/lib/mpd
 WORKDIR /var/lib/mpd
