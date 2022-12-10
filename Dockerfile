@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.title="MPD" \
     org.opencontainers.image.created="${BUILD_DATE}" \
     org.opencontainers.image.revision="${VCS_REF}" 
 
-#COPY mpd.conf /etc/mpd.conf.new # provide your own an dmount as a file!
+COPY mpd.conf /etc/mpd.conf.new # provide your own an dmount as a file!
 
 RUN set -eux ; \
     apk --no-cache add \
