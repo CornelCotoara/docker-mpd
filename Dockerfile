@@ -22,19 +22,14 @@ RUN set -eux ; \
         /var/lib/mpd/data/state \
         /var/lib/mpd/data/sticker.sql \
     ; \
-    chown -R mpd:audio /var/lib/mpd ; \
+    chown -R mpd /var/lib/mpd ; \
     cp /etc/mpd.conf /etc/mpd.conf.backup ; \
     mv /etc/mpd.conf.new /etc/mpd.conf ; \
-    chown -R mpd:audio /etc/mpd.con*             
+    chown -R mpd /etc/mpd.con* ; \
+    chown -R mpd /mpd/cache
         
 VOLUME /var/lib/mpd
 WORKDIR /var/lib/mpd
 EXPOSE 6600 8000
 
-CMD ["/usr/bin/mpd", "--no-daemon", "--stdout", "/etc/mpd.conf"]
-    
- 
-#COPY mpd.conf /etc/mpd.conf
-#COPY docker-entrypoint.sh /
-
-#ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["/usr/bin/mpd", "--no-daemon", "--stdout", "/etc/mpd.conf" "$@"]
