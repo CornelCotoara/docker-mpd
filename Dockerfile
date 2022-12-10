@@ -16,7 +16,7 @@ RUN set -x \
     apk --no-cache add \
         mpd \
         opus-tools \
-        bash
+        bash \
     && adduser -DH mpd
     
 #COPY mpd.conf /etc/mpd.conf
