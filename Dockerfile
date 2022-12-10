@@ -16,6 +16,6 @@ RUN set -x \
     apk --no-cache add \
         mpd \
         opus-tools \
-    adduser -DH mpd
+    && adduser -DH mpd
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
