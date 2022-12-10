@@ -12,7 +12,7 @@ LABEL org.opencontainers.image.title="MPD" \
 
 #COPY mpd.conf /etc/mpd.conf.new # provide your own an dmount as a file!
 
-RUN set -eux ; \
+RUN set -x \
     apk --no-cache add \
         mpd \
         opus-tools \
