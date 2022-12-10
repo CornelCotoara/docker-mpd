@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 ARG MPD_VERSION=0.23
-ARG MPD_PATCH=8
+ARG MPD_PATCH=11
 
 RUN set -x \
   \
@@ -27,7 +27,8 @@ RUN set -x \
     icu-dev \
     libnfs-dev \
     # samba-dev \
-    opus-dev \
+    # opus-dev \
+    opus-tools \
     ffmpeg-dev \
     libmpdclient-dev \
     # libcdio-paranoia-dev \
@@ -69,7 +70,7 @@ RUN set -x \
       | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
   )" \
   && apk add --virtual .mpd-rundeps $runDeps \
-  && apk del .build-deps \
+  && apk del .build-deps wget \
   && adduser -DH mpd
 
 COPY mpd.conf /etc/mpd.conf
