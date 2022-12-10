@@ -17,5 +17,8 @@ RUN set -x \
         mpd \
         opus-tools \
     && adduser -DH mpd
+    
+COPY mpd.conf /etc/mpd.conf
 COPY docker-entrypoint.sh /
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
