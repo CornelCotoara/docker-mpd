@@ -9,4 +9,4 @@ touch \
 chown -R mpd /mpd/cache
 
 ## start
-exec mpd --no-daemon --stdout /etc/mpd.conf "$@"
+exec /usr/bin/mpd --no-daemon --stdout /etc/mpd.conf "$@"
