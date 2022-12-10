@@ -27,7 +27,8 @@ RUN set -x \
     icu-dev \
     libnfs-dev \
     # samba-dev \
-    opus-dev \
+    # opus-dev \
+    opus-tools \
     ffmpeg-dev \
     libmpdclient-dev \
     # libcdio-paranoia-dev \
