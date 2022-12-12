@@ -75,4 +75,5 @@ RUN set -x \
 
 COPY mpd.conf /etc/mpd.conf
 COPY docker-entrypoint.sh /
+EXPOSE 6600 8000
 ENTRYPOINT ["/docker-entrypoint.sh"]
